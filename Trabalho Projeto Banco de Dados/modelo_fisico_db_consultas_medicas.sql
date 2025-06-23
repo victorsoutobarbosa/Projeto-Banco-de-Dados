@@ -1,8 +1,14 @@
+-- Criação do banco de dados
+CREATE DATABASE consultas_medicas_db;
+USE consultas_medicas_db;
+
+-- Tabela de Especialidades
 CREATE TABLE ESPECIALIDADE (
   id_especialidade INT AUTO_INCREMENT PRIMARY KEY,
   nome VARCHAR(50) NOT NULL
 );
 
+-- Tabela de Pacientes
 CREATE TABLE PACIENTE (
   id_paciente INT AUTO_INCREMENT PRIMARY KEY,
   nome VARCHAR(100) NOT NULL,
@@ -12,6 +18,7 @@ CREATE TABLE PACIENTE (
   cpf VARCHAR(14) UNIQUE
 );
 
+-- Tabela de Médicos
 CREATE TABLE MEDICO (
   id_medico INT AUTO_INCREMENT PRIMARY KEY,
   nome VARCHAR(100) NOT NULL,
@@ -21,12 +28,14 @@ CREATE TABLE MEDICO (
   FOREIGN KEY (id_especialidade) REFERENCES ESPECIALIDADE(id_especialidade)
 );
 
+-- Tabela de Salas
 CREATE TABLE SALA (
   id_sala INT AUTO_INCREMENT PRIMARY KEY,
   numero VARCHAR(10),
   andar VARCHAR(10)
 );
 
+-- Tabela de Consultas
 CREATE TABLE CONSULTA (
   id_consulta INT AUTO_INCREMENT PRIMARY KEY,
   id_paciente INT,
