@@ -1,4 +1,4 @@
--- Criação do banco de dados
+-- CriaÃ§Ã£o do banco de dados
 CREATE DATABASE consultas_medicas_db;
 USE consultas_medicas_db;
 
@@ -18,7 +18,7 @@ CREATE TABLE PACIENTE (
   cpf VARCHAR(14) UNIQUE
 );
 
--- Tabela de Médicos
+-- Tabela de MÃ©dicos
 CREATE TABLE MEDICO (
   id_medico INT AUTO_INCREMENT PRIMARY KEY,
   nome VARCHAR(100) NOT NULL,
