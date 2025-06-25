@@ -1,5 +1,5 @@
 -- Criação do banco de dados
-CREATE DATABASE IF NOT EXISTS consultas_medicas_db;
+CREATE DATABASE consultas_medicas_db;
 USE consultas_medicas_db;
 
 -- Tabela de Especialidades
